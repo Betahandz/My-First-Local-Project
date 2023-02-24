@@ -1,0 +1,208 @@
+/* The fonts to be used in my project */
+@font-face {
+    font-family: pop-7;
+    src: url(../../My-Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: pop-6;
+    src: url(../../My-Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: pop-5;
+    src: url(../../My-Fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: pop-4;
+    src: url(../../My-Fonts/Poppins-Regular.ttf);
+}
+/* End of fonts */
+
+/* Don't forget your roots */
+:root{
+    /* Colors */
+    --red: hsl(0, 100%, 74%); 
+    --reda: hsla(0, 100%, 74%, .7); 
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark_blue: hsl(249, 10%, 26%);
+    --grayish_blue: hsl(246, 25%, 77%);
+
+
+    /* Typography */
+    --p5: pop-5;
+    --p4: pop-4;
+    --p6: pop-6;
+    --p7: pop-7;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    color: white;
+    background-image: linear-gradient(var(--reda), var(--reda)),url(images/bg-intro-desktop.png);
+}
+/* the main of the project styline */
+.details{
+    width: 100%;
+    max-width: 1000px;
+    align-items: stretch;
+    height: 90%;
+}
+.details, .write-up{
+    display: flex;
+    
+}
+.form_and_trial, .write-up{
+    width: 50%;
+}
+.write-up{
+    flex-flow: nowrap column;
+    justify-content: center;
+    padding-left: 20px;
+}
+.hero_title{
+    font-family: var(--p7);
+    font-size: 2.87vw;
+}
+.mobile{
+    display: none;
+}
+.more_detail{
+    margin-top: 16px;
+    font-family: var(--p4);
+    font-size: 13px;
+}
+/* end of the write up section */
+
+/* beginning of form and trial */
+/* .form_and_trial{
+} */
+.trial_period{
+    background-color: var(--blue);
+    font-family: var(--p4);
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 2px 0 var(--dark_blue);
+    padding: 15px 0;
+}
+/* the submit button can be found here too */
+.trial_period, #submit{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+/* form container */
+.form_container{
+    margin-top: 5px;
+    height: calc(100% - 80px);
+    background-color: white;
+    border-radius: 10px;
+    padding: 35px;
+}
+.forminp{
+    width: 100%;
+    /* background-color: white; */
+    margin-bottom: 20px;
+    height: 60px;
+    position: relative;
+}
+.forminp input{
+    outline-color: rgb(160, 140, 140);
+    border: solid 1px gray;
+    padding: 5px 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 9px;
+    color: var(--red);
+}
+::placeholder, .forminp input{
+    font-family: var(--p5);
+}
+.error{
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    display: none;
+}
+.showerror{
+    display: block;
+}
+.alert{
+    text-align: right;
+    font-size: 11px;
+    font-family: var(--p4);
+    color: var(--red);
+}
+#submit{
+    background-color: var(--green);
+    color: white;
+    font-family: var(--p5);
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+/* some other features of the submit button can be found
+in the trial period upwards */
+
+/* Terms and condition */
+.terms{
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+.terms small{
+    color: var(--grayish_blue);
+}
+.terms small .tlink{
+    text-decoration: none;
+    color: var(--red);
+    font-family: var(--p6);
+}
+@media screen and (max-width: 375px) {
+    .trial_period{
+        padding: 20px 0;
+    }
+    .trial_period .linec{
+        display: block;
+    }
+    .more_detail{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+    .hero_title{
+        font-size: 20px;
+        text-align: center;
+    }
+    .write-up{
+        height: auto;
+        justify-content: unset;
+        padding: 30px 0;
+    }
+    .form_and_trial, .write-up{
+        width: 100%;
+        /* height: auto; */
+    }
+    .details{
+        display: unset;
+        width: 90%;
+        margin: auto;
+    }
+    body{
+        background-image: linear-gradient(var(--reda), var(--reda)),url(images/bg-intro-mobile.png); ;
+    }
+}

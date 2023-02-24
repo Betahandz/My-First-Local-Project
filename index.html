@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- The external styling -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- The functionality of my web -->
+  <script src="script.js" defer></script>
+  
+</head>
+<body>
+
+  <!-- the main of this project -->
+  <main class="details">
+    <!-- the detail/write_up section -->
+    <section class="write-up">
+      <!-- the title of the project -->
+      <h1 class="hero_title">
+        Learn to code by </br>watching others
+      </h1>
+
+      <!-- the more section paragraph -->
+      <p class="more_detail desktop">
+        See how experienced developers solve problems in real-time.
+      </br>
+       Watching scripted tutorials is great, but understanding how 
+      </br>
+      developers think is invaluable. 
+      </p>
+
+      <!-- the more section paragraph -->
+      <p class="more_detail mobile">
+        See how experienced developers solve <br>
+        problems in real-time. Watching <br>
+        scripted tutorials is great. but <br>
+        understanding hoe developers think is <br> 
+        invaluable
+      </p>
+    </section>
+
+    <!-- the form section and trial period section of this project-->
+    <section class="form_and_trial">
+      <!-- the trial duration button -->
+      <button type="button" class="trial_period" >
+        <b>Try it free 7 days</b> then <span class="linec">$20/mo. thereafter</span>
+      </button>
+
+      <!-- there should be like a div holding the form -->
+      <div class="form_container">
+        <!-- the form section -->
+        <form action="submit.html" method="get" class="form">
+          
+          <!-- first name -->
+          <div class="firstname forminp">
+            <input type="text" name="firstname" id="firstname" placeholder="First Name">
+            <img src="images/icon-error.svg" alt="error" class="error">
+            <p class="alert"></p>
+          </div>
+          
+          <!-- last name -->
+          <div class="lastname forminp">
+            <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+            <img src="images/icon-error.svg" alt="error" class="error">
+            <p class="alert"></p>
+          </div>
+          
+          <!-- Email address -->
+          <div class="email forminp">
+            <input type="email" name="email_address" id="email" placeholder="Email Address">
+            <img src="images/icon-error.svg" alt="error" class="error">
+            <p class="alert"></p>
+          </div>
+          
+          <!-- Password -->
+          <div class="password forminp">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <img src="images/icon-error.svg" alt="error" class="error">
+            <p class="alert"></p>
+          </div>
+          
+          <!-- button for the submission of the form -->
+          <button type="submit" id="submit">
+            Claim your free trial 
+          </button>
+   
+        </form>
+        
+        <!-- the terms and condition -->
+        <article class="terms">
+          <small>By clicking the button, you are agreeing to our <a href="" title="Terms and Condition" target="_self" class="tlink">Terms and Services</a></small>
+        </article>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+</body>
+</html>
